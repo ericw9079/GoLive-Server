@@ -1,0 +1,22 @@
+{
+  "name": "GoLive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@replit/database": "^2.0.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elw-arduino/GoLive-Server.git"
+  },
+  "keywords": [],
+  "author": "ericw9079",
+  "bugs": {
+    "url": "https://github.com/elw-arduino/GoLive-Server/issues"
+  },
+  "homepage": "https://github.com/elw-arduino/GoLive-Server#readme"
+}
