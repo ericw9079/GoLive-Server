@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@replit/database": "^2.0.2",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
   },
   "devDependencies": {},
   "scripts": {},
