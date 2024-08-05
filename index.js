@@ -1,11 +1,4 @@
-const keepAlive = require("./server.js");
+const logger = require('@ericw9079/logger');
+const server = require("./server.js");
 
-keepAlive();
-
-/*const db = require('./database.js')
-db.list().then(async (keys)=>{
-  for(let key in keys){
-    let value = await db.get(keys[key],"");
-    console.log(keys[key]," => ",value);
-  }
-});*/
+server.listen(3000, () => { logger.log("Server is Ready!") });

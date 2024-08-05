@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel='icon' type='image/png' href='./GoLive.png'>
-  </head>
-  <div style='display:flex;align-content:center'>
-    <img style='height:10vh;margin-right:5px' src='./GoLive.png' />
-    <div style='display:inline-block'>
-      <h1 style='margin-bottom:0px'>
-        GoLive
-      </h1>
-      <h5 style='margin-top:0px'>
-        by ericw9079
-      </h5>
-    </div>
-  </div>
-  <iframe style='border:none;width:90vw;height:70vh' src='./live'>
-  </iframe>
+	<head>
+		<!-- Axios for refreshing -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<link rel='icon' type='image/png' href='./GoLive.png'>
+		<title>GoLive - by ericw9079</title>
+		<style>
+			.header {
+				display: flex;
+				align-content:center;
+			}
+			
+			.header img {
+				height: 10vh;
+				margin-right: 5px;
+			}
+			
+			.header .header-text {
+				display: inline-block;
+			}
+			
+			.header .header-text h1 {
+				margin-bottom: 0px;
+			}
+			
+			.header .header-text h5 {
+				margin-top: 0px;
+			}
+			
+			#live {
+				width: 50vw;
+				height: 70vh;
+				max-width: 960px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src='./GoLive.png' />
+			<div class="header-text">
+				<h1>GoLive</h1>
+				<h5>by ericw9079</h5>
+			</div>
+		</div>
+		<div id="live"></div>
+  </body>
+  <footer>
+    <script>
+		const OK = 200;
+		const refeshInterval = 5000;
+		const refreshLive = async () => {
+			try {
+				const { data, status } = await axios.get('./live');
+				const live = document.getElementById('live');
+				if (status === OK) {
+					// The live data has changed
+					live.innerHTML = data;
+				}
+			} catch (e) {
+				console.error(e);
+			}
+			setTimeout(refreshLive, refeshInterval);
+		}
+		refreshLive();
+    </script>
+  </footer>
 </html>

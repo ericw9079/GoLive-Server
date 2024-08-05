@@ -1,29 +1,35 @@
-<table style='width:100%'>
-  <tr>
-    <td>
-      <b>
-        Online:
-      </b>
-    </td>
-    <td>
-      <b>
-        Offline:
-      </b>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align: top;">
-      {{#each channels.online}}
-        {{>online name=this}}
-      {{/each}}
-    </td>
-    <td style="vertical-align: top;">
-      {{#each channels.offline}}
-        {{>offline name=this}}
-      {{/each}}
-    </td>
-  </tr>
-</table>
-<script>
-  setTimeout(function(){document.location.reload()}, 5000);
-</script>
+<style>
+	.cols {
+		display: flex;
+		justify-content: space-between;
+	}
+	a {
+		text-decoration: none;
+	}
+	dl {
+		margin-top: 0;
+		width: fit-content;
+	}
+	dt {
+		text-decoration: underline;
+	}
+	dd {
+		color: black;
+	}
+</style>
+<div class="cols">
+	<div>
+		<b>Online:</b>
+		<dl>
+			{{#each channels.online}}
+				{{>online data=this}}
+			{{/each}}
+		</dl>
+	</div>
+	<div>
+		<b>Offline:</b>
+		{{#each channels.offline}}
+			{{>offline data=this}}
+		{{/each}}
+	</div>
+</div>
