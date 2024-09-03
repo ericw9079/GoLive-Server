@@ -1,7 +1,7 @@
 {
   "name": "GoLive-Server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web server for GoLive bot",
   "main": "index.js",
   "dependencies": {
     "@ericw9079/database": "^1.0.0",
