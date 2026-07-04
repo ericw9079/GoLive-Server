@@ -3,7 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const db = require('@ericw9079/database');
 
-db.connect('server', 'server', 'golive', 'goliveDb');
+db.connect('server', 'server', 'golive', 'db');
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'), function(err) { });
 
