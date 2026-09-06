@@ -4,13 +4,13 @@
   "description": "Web server for GoLive bot",
   "main": "index.js",
   "dependencies": {
-    "@ericw9079/database": "^1.0.0",
-    "@ericw9079/logger": "^3.0.4",
-    "express": "^4.19.2",
-    "hbs": "^4.2.0"
+    "@ericw9079/database": "^1.0.2",
+    "@ericw9079/logger": "^3.0.5",
+    "express": "^4.22.2",
+    "hbs": "^4.3.0"
   },
   "scripts": {
-	"start": "node ."
+    "start": "node ."
   },
   "repository": {
     "type": "git",
